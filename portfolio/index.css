@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "SUIT-Regular";
 
-  text-decoration:none;
+  text-decoration: none;
 }
 @font-face {
   font-family: "SUIT-Regular";
@@ -18,12 +18,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  
+
   background-color: #0e0e0e;
   margin: 0;
-  
 }
-
 
 .header {
   display: flex;
@@ -41,7 +39,6 @@ body {
 .header .logo {
   font-size: 1.5rem;
   color: white;
-  
 }
 
 .header .menu {
@@ -60,34 +57,33 @@ body {
   width: 1812px;
 }
 
-
 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
   position: relative;
-  width:100%;
+  width: 100%;
   height: 100%;
 }
 .content-top {
-    width: 100%;
+  width: 100%;
 }
 .content-top_1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
 }
 .number {
-    font-size: 140px;
-    color: white;
-    text-align: right;
-    font-weight: 700;
-    display: flex;
-  }
-  
+  font-size: 140px;
+  color: white;
+  text-align: right;
+  font-weight: 700;
+  display: flex;
+}
+
 .titles {
   display: flex;
   flex-direction: column;
@@ -98,9 +94,8 @@ body {
   margin-bottom: 30px;
 }
 
-
 .title {
-  color: #B2B2B7;
+  color: #b2b2b7;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
@@ -108,28 +103,42 @@ body {
   font-size: 14px;
 }
 .title span:last-child {
-margin-left: 20px;
+  margin-left: 20px;
 }
 .title.active {
-    background-color: #212121;
+  background-color: #212121;
   color: white;
 }
 
-
 .view {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .view > * {
-    color: white;
+  color: white;
+  font-size: 20px;
 }
 .view > a:first-child {
-    width: 100%;
+  width: 100%;
 }
 .view > a {
-    cursor: pointer;
-    padding: 20px 10px;
+  cursor: pointer;
+  padding: 20px 10px;
+}
+
+.view > a:last-child {
+  animation: bounce 1s ease infinite; /* 애니메이션 호출 */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0); /* 원래 위치 */
+  }
+  50% {
+    transform: translateX(10px); /* 오른쪽으로 10px 이동 */
+  }
 }
 
 /*
@@ -140,21 +149,20 @@ margin-left: 20px;
 */
 
 .content-bottom {
-    
-    border-top: 1px solid #444;
-    padding: 20px 0 0;
+  border-top: 1px solid #444;
+  padding: 20px 0 0;
 }
 .description {
-    color: #fff;
-    border-radius: 8px;
-    font-size: 38px;
-    width: 100%; /* 원하는 너비 유지 */
-    line-height: 1.5; /* 줄 간격 유지 */
-    white-space: normal; /* 줄바꿈 허용 */
-    overflow: visible; /* 텍스트 잘림 방지 */
-    word-wrap: break-word; /* 긴 단어 줄바꿈 */
-    height: auto; /* 높이 자동 조정 */
-    font-weight: light;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 38px;
+  width: 100%; /* 원하는 너비 유지 */
+  line-height: 1.5; /* 줄 간격 유지 */
+  white-space: normal; /* 줄바꿈 허용 */
+  overflow: visible; /* 텍스트 잘림 방지 */
+  word-wrap: break-word; /* 긴 단어 줄바꿈 */
+  height: auto; /* 높이 자동 조정 */
+  font-weight: light;
 }
 
 .image {
@@ -164,34 +172,32 @@ margin-left: 20px;
   width: 802px;
 }
 .image_line {
-    width: 1px;
-    height: 100%;
-    border-left: 1px solid #444;
-    margin-right: 40px;
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #444;
+  margin-right: 40px;
 }
 
 #image {
   height: 100%;
 }
 
-
 /* 이미지 전환 애니메이션 */
 #image img {
-    transition: opacity 0.5s ease-in-out; /* 부드러운 페이드 효과 */
-    opacity: 1;
-  }
-  
-  #image img.hidden {
-    opacity: 0;
-  }
-  
-  /* active 상태 전환 애니메이션 */
-  .title {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .title.active {
-    background-color: #333; /* 활성화 상태 배경색 */
-    color: white; /* 활성화 상태 텍스트 색상 */
-  }
-  
+  transition: opacity 0.5s ease-in-out; /* 부드러운 페이드 효과 */
+  opacity: 1;
+}
+
+#image img.hidden {
+  opacity: 0;
+}
+
+/* active 상태 전환 애니메이션 */
+.title {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.title.active {
+  background-color: #333; /* 활성화 상태 배경색 */
+  color: white; /* 활성화 상태 텍스트 색상 */
+}
