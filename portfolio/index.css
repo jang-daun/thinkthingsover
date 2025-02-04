@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SUIT-Regular";
+
+  text-decoration:none;
+}
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px; /* 명시적인 높이 설정 */
+  box-sizing: border-box; /* 패딩 포함 */
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  color: white;
+  
+}
+
+.header .menu {
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 1118px; /* 콘텐츠 너비 */
+  width: 100%; /* 화면 축소 시 대응 */
+  padding: 80px 20px 20px; /* 헤더 공간 확보 */
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #0e0e0e;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  width: 1118px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  max-width: calc(50% - 40px); /* Ensure proper spacing on smaller screens */
+  word-wrap: break-word;
+}
+
+.title {
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+.title span:last-child {
+margin-left: 20px;
+}
+.title.active {
+    background-color: #212121;
+  color: white;
+}
+
+.number {
+  position: absolute;
+  top: -65px;
+  right: 0;
+  font-size: 16rem;
+  color: white;
+  max-width: 50%; /* Prevent number from overlapping titles on smaller screens */
+  text-align: right;
+  font-weight: 700;
+}
+
+.view {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.view > * {
+    color: white;
+}
+.description {
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 48px;
+    width: 100%; /* 원하는 너비 유지 */
+    line-height: 1.5; /* 줄 간격 유지 */
+    white-space: normal; /* 줄바꿈 허용 */
+    overflow: visible; /* 텍스트 잘림 방지 */
+    word-wrap: break-word; /* 긴 단어 줄바꿈 */
+    height: auto; /* 높이 자동 조정 */
+    font-weight: light;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 740px;
+  padding: 20px;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
