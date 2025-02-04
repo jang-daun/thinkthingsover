@@ -18,20 +18,23 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  
+  background-color: #0e0e0e;
   margin: 0;
+  
 }
+
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 0;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 1812px;
   z-index: 1000;
-  height: 60px; /* 명시적인 높이 설정 */
+  height: 100px; /* 명시적인 높이 설정 */
   box-sizing: border-box; /* 패딩 포함 */
 }
 
@@ -50,33 +53,54 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  width: 1118px; /* 콘텐츠 너비 */
   width: 100%; /* 화면 축소 시 대응 */
-  padding: 80px 20px 20px; /* 헤더 공간 확보 */
+  padding: 100px 0px 40px; /* 헤더 공간 확보 */
   height: 100vh;
   box-sizing: border-box;
-  background-color: #0e0e0e;
+  width: 1812px;
 }
+
+
 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
   position: relative;
-  width: 1118px;
+  width:100%;
+  height: 100%;
 }
-
+.content-top {
+    width: 100%;
+}
+.content-top_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+.number {
+    font-size: 140px;
+    color: white;
+    text-align: right;
+    font-weight: 700;
+    display: flex;
+  }
+  
 .titles {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  flex: 1;
+  gap: 5px;
   max-width: calc(50% - 40px); /* Ensure proper spacing on smaller screens */
   word-wrap: break-word;
+  height: auto;
+  margin-bottom: 30px;
 }
 
+
 .title {
-  color: white;
+  color: #B2B2B7;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
@@ -91,19 +115,8 @@ margin-left: 20px;
   color: white;
 }
 
-.number {
-  position: absolute;
-  top: -65px;
-  right: 0;
-  font-size: 16rem;
-  color: white;
-  max-width: 50%; /* Prevent number from overlapping titles on smaller screens */
-  text-align: right;
-  font-weight: 700;
-}
 
 .view {
-    padding: 20px;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -111,11 +124,30 @@ margin-left: 20px;
 .view > * {
     color: white;
 }
+.view > a:first-child {
+    width: 100%;
+}
+.view > a {
+    cursor: pointer;
+    padding: 20px 10px;
+}
+
+/*
+.divider {
+    border-bottom: 1px solid #444; 
+    width: 100%;
+    height: 1px;}
+*/
+
+.content-bottom {
+    
+    border-top: 1px solid #444;
+    padding: 20px 0 0;
+}
 .description {
     color: #fff;
-    padding: 20px;
     border-radius: 8px;
-    font-size: 48px;
+    font-size: 38px;
     width: 100%; /* 원하는 너비 유지 */
     line-height: 1.5; /* 줄 간격 유지 */
     white-space: normal; /* 줄바꿈 허용 */
@@ -127,14 +159,39 @@ margin-left: 20px;
 
 .image {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  width: 740px;
-  padding: 20px;
+  width: 802px;
+}
+.image_line {
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #444;
+    margin-right: 40px;
 }
 
 #image {
-  width: 100%;
   height: 100%;
-  border-radius: 10px;
 }
+
+
+/* 이미지 전환 애니메이션 */
+#image img {
+    transition: opacity 0.5s ease-in-out; /* 부드러운 페이드 효과 */
+    opacity: 1;
+  }
+  
+  #image img.hidden {
+    opacity: 0;
+  }
+  
+  /* active 상태 전환 애니메이션 */
+  .title {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .title.active {
+    background-color: #333; /* 활성화 상태 배경색 */
+    color: white; /* 활성화 상태 텍스트 색상 */
+  }
+  

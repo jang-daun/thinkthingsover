@@ -19,7 +19,7 @@ const data = [
   },
   {
     number: "03",
-    description: "미래 세대를 위한 깨끗한 환경 조성을 목표로 다양한 캠페인과 연구를 진행하고 있습니다.",
+    description: "최근 가챠샵 소비가 증가하는 추세입니다. ‘오늘가챠’는 소비자가 더욱 의미있는 소비생활을 할 수 있도록 제작했습니다. 오프라인의 상품 종류, 재고 파악, 편리한 소통 등의 다양한 기능을 담았습니다. 헛걸음은 이제 그만!",
     imageSrc: "https://cdn.jsdelivr.net/gh/jang-daun/portfolio/pf_greenpeace.jpg",
     link: "https://example.com/project3" // 링크 추가
   },
