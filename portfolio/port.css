@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SUIT-Regular";
+    text-decoration: none;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-color: #0e0e0e;
+    margin: 0;
+  }
+  
+
+  img {
+    width: 1300px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 1812px;
+    z-index: 1000;
+    height: 100px; /* 명시적인 높이 설정 */
+    box-sizing: border-box; /* 패딩 포함 */
+    border-bottom: solid 1px #444;
+  }
+  
+  .header .logo {
+    width:259px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  .logo > img {
+    width: 100%;
+  }
+  
+  .header .menu {
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+  }
